@@ -1,0 +1,35 @@
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+/* RTL support */
+[dir="rtl"] body {
+  font-family: 'Tajawal', sans-serif;
+}
+
+/* Ensure all elements inherit the RTL direction */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+/* RTL-specific adjustments */
+[dir="rtl"] .rtl\:text-right {
+  text-align: right;
+}
+
+[dir="rtl"] .rtl\:mr-2 {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* Reset styles */
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: unset;
+}
