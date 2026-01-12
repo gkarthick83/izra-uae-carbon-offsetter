@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuth } from '../../contexts/AuthContext';
+import { useJWTAuth } from '../../contexts/JWTAuthContext';
 
 export default function RoleDashboardRouter() {
-  const { user, userProfile, loading, profileLoading } = useAuth();
+  const { user, loading } = useJWTAuth();
   const [redirectPath, setRedirectPath] = useState(null);
 
   useEffect(() => {
-    if (!loading && !profileLoading) {
+    if (!loading) {
       if (!user) {
         setRedirectPath('/login');
         return;
       }
 
-      if (userProfile?.role) {
+      if (user?.role) {
         // Map user role to dashboard route
         const roleRoutesMap = {
           admin: '/admin-console',
@@ -23,14 +23,14 @@ export default function RoleDashboardRouter() {
           sponsor: '/sponsor-dashboard'
         };
 
-        const targetRoute = roleRoutesMap?.[userProfile?.role] || '/buyer-dashboard';
+        const targetRoute = roleRoutesMap?.[user?.role] || '/buyer-dashboard';
         setRedirectPath(targetRoute);
       }
     }
-  }, [user, userProfile, loading, profileLoading]);
+  }, [user, loading]);
 
   // Show loading state while checking authentication
-  if (loading || profileLoading || !redirectPath) {
+  if (loading || !redirectPath) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">

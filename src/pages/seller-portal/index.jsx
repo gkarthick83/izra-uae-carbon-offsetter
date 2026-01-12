@@ -27,125 +27,19 @@ const SellerPortal = () => {
   };
 
   const mockSellerData = {
-    kycStatus: 'approved',
+    kycStatus: 'pending',
     subscription: {
-      plan: 'Professional',
-      status: 'active',
-      expiryDate: '2025-12-22',
-      annualFee: 5000
+      plan: 'None',
+      status: 'inactive',
+      expiryDate: null,
+      annualFee: 0
     },
-    projects: [
-    {
-      id: 1,
-      name: 'Abu Dhabi Mangrove Restoration',
-      type: 'mangrove',
-      location: 'UAE',
-      region: 'Abu Dhabi Eastern Mangroves',
-      status: 'active',
-      image: "https://images.unsplash.com/photo-1644372365212-f0b7a16d3491",
-      imageAlt: 'Lush green mangrove forest with dense vegetation along coastal waterway in Abu Dhabi with clear blue sky',
-      availableCredits: 15000,
-      totalRevenue: 450000
-    },
-    {
-      id: 2,
-      name: 'Dubai Solar Farm Initiative',
-      type: 'solar',
-      location: 'UAE',
-      region: 'Dubai Desert Conservation Reserve',
-      status: 'active',
-      image: "https://img.rocket.new/generatedImages/rocket_gen_img_18363b4a5-1766183617080.png",
-      imageAlt: 'Large-scale solar panel array installation in desert landscape with rows of photovoltaic panels under bright sunlight',
-      availableCredits: 8500,
-      totalRevenue: 255000
-    },
-    {
-      id: 3,
-      name: 'Ras Al Khaimah Afforestation',
-      type: 'afforestation',
-      location: 'UAE',
-      region: 'Ras Al Khaimah Mountain Region',
-      status: 'pending',
-      image: "https://images.unsplash.com/photo-1624904356416-0f0acf5d1e89",
-      imageAlt: 'Dense forest canopy with tall trees creating natural green corridor viewed from ground looking upward',
-      availableCredits: 12000,
-      totalRevenue: 0
-    }],
+    projects: [],
+    credits: [],
 
-    credits: [
-    {
-      id: 1,
-      projectName: 'Abu Dhabi Mangrove Restoration',
-      location: 'Abu Dhabi, UAE',
-      available: 15000,
-      priceAED: 30,
-      nftStatus: 'converted'
-    },
-    {
-      id: 2,
-      projectName: 'Dubai Solar Farm Initiative',
-      location: 'Dubai, UAE',
-      available: 8500,
-      priceAED: 30,
-      nftStatus: 'converted'
-    },
-    {
-      id: 3,
-      projectName: 'Ras Al Khaimah Afforestation',
-      location: 'Ras Al Khaimah, UAE',
-      available: 12000,
-      priceAED: 25,
-      nftStatus: 'pending'
-    }],
+    revenueData: [],
 
-    revenueData: [
-    { month: 'Jan', revenue: 45000, fees: 900 },
-    { month: 'Feb', revenue: 52000, fees: 1040 },
-    { month: 'Mar', revenue: 48000, fees: 960 },
-    { month: 'Apr', revenue: 61000, fees: 1220 },
-    { month: 'May', revenue: 55000, fees: 1100 },
-    { month: 'Jun', revenue: 68000, fees: 1360 }],
-
-    transactions: [
-    {
-      id: 1,
-      type: 'sale',
-      description: 'Carbon Credit Sale - Abu Dhabi Mangrove',
-      amount: 15000,
-      credits: 500,
-      buyer: 'Emirates Environmental Group',
-      date: '2025-12-20T14:30:00'
-    },
-    {
-      id: 2,
-      type: 'fee',
-      description: 'Platform Service Fee (2%)',
-      amount: 300,
-      date: '2025-12-20T14:30:00'
-    },
-    {
-      id: 3,
-      type: 'sale',
-      description: 'Carbon Credit Sale - Dubai Solar Farm',
-      amount: 9000,
-      credits: 300,
-      buyer: 'Dubai Sustainability Initiative',
-      date: '2025-12-18T10:15:00'
-    },
-    {
-      id: 4,
-      type: 'fee',
-      description: 'Platform Service Fee (2%)',
-      amount: 180,
-      date: '2025-12-18T10:15:00'
-    },
-    {
-      id: 5,
-      type: 'payout',
-      description: 'Monthly Payout to Bank Account',
-      amount: 23520,
-      date: '2025-12-15T09:00:00'
-    }]
+    transactions: []
 
   };
 

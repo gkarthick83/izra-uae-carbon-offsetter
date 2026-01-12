@@ -14,6 +14,13 @@ export default defineConfig(async () => {
       host: "0.0.0.0",
       strictPort: true,
       proxy: {
+        // Proxy to our new MERN backend
+        '/api': {
+          target: 'http://localhost:5000',
+          changeOrigin: true,
+          secure: false,
+        },
+        // Keep Supabase proxy for any remaining Supabase calls during transition
         '/auth/v1': {
           target: 'https://yxkelbllidfqazncwpzk.supabase.co',
           changeOrigin: true,

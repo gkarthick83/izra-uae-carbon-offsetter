@@ -68,166 +68,32 @@ const InvestorDashboard = () => {
   const t = content?.[currentLanguage];
 
   const portfolioData = {
-    totalHoldings: 125000,
-    stakedAmount: 75000,
-    availableRewards: 3250,
-    shareholderPercentage: 0.15,
-    totalValueAED: 437500,
-    monthlyGrowth: '+12.5%',
+    totalHoldings: 0,
+    stakedAmount: 0,
+    availableRewards: 0,
+    shareholderPercentage: 0,
+    totalValueAED: 0,
+    monthlyGrowth: '0%',
   };
 
-  const stakingPools = [
-    {
-      id: 1,
-      name: "Flexible Staking",
-      description: "Stake and unstake anytime with daily rewards",
-      apy: 8.5,
-      lockPeriod: "No lock",
-      userStaked: 25000,
-      totalStaked: 5000000,
-      availableBalance: 50000,
-      status: "active",
-    },
-    {
-      id: 2,
-      name: "90-Day Lock",
-      description: "Higher rewards with 90-day commitment",
-      apy: 15.0,
-      lockPeriod: "90 days",
-      userStaked: 30000,
-      totalStaked: 3500000,
-      availableBalance: 50000,
-      status: "active",
-    },
-    {
-      id: 3,
-      name: "180-Day Lock",
-      description: "Maximum rewards with 180-day commitment",
-      apy: 22.5,
-      lockPeriod: "180 days",
-      userStaked: 20000,
-      totalStaked: 2000000,
-      availableBalance: 50000,
-      status: "active",
-    },
-  ];
+  const stakingPools = [];
 
-  const rewards = [
-    {
-      id: 1,
-      type: "Staking Rewards",
-      description: "Monthly rewards from flexible staking pool",
-      amount: 1250,
-      valueAED: 4375,
-      distributionDate: "22/12/2025",
-      status: "available",
-    },
-    {
-      id: 2,
-      type: "Platform Revenue Share",
-      description: "Quarterly revenue distribution to shareholders",
-      amount: 2000,
-      valueAED: 7000,
-      distributionDate: "31/12/2025",
-      status: "pending",
-    },
-    {
-      id: 3,
-      type: "Bonus Rewards",
-      description: "Special bonus for early investors",
-      amount: 500,
-      valueAED: 1750,
-      distributionDate: "15/12/2025",
-      status: "claimed",
-    },
-  ];
+  const rewards = [];
 
-  const priceHistoryData = [
-    { name: 'Jan', value: 2.8 },
-    { name: 'Feb', value: 3.0 },
-    { name: 'Mar', value: 3.2 },
-    { name: 'Apr', value: 3.1 },
-    { name: 'May', value: 3.4 },
-    { name: 'Jun', value: 3.5 },
-    { name: 'Jul', value: 3.3 },
-    { name: 'Aug', value: 3.6 },
-    { name: 'Sep', value: 3.7 },
-    { name: 'Oct', value: 3.5 },
-    { name: 'Nov', value: 3.8 },
-    { name: 'Dec', value: 3.5 },
-  ];
+  const priceHistoryData = [];
 
-  const tradingVolumeData = [
-    { name: 'Week 1', value: 125000 },
-    { name: 'Week 2', value: 145000 },
-    { name: 'Week 3', value: 132000 },
-    { name: 'Week 4', value: 168000 },
-  ];
+  const tradingVolumeData = [];
 
-  const tvlData = [
-    { name: 'Jan', value: 5000000 },
-    { name: 'Feb', value: 5500000 },
-    { name: 'Mar', value: 6200000 },
-    { name: 'Apr', value: 6800000 },
-    { name: 'May', value: 7500000 },
-    { name: 'Jun', value: 8200000 },
-    { name: 'Jul', value: 8900000 },
-    { name: 'Aug', value: 9600000 },
-    { name: 'Sep', value: 10300000 },
-    { name: 'Oct', value: 11000000 },
-    { name: 'Nov', value: 11800000 },
-    { name: 'Dec', value: 12500000 },
-  ];
+  const tvlData = [];
 
-  const transactions = [
-    {
-      id: 1,
-      type: 'stake',
-      amount: 10000,
-      date: '22/12/2025 14:30',
-      status: 'completed',
-      txId: '0x7a8b9c...def123',
-    },
-    {
-      id: 2,
-      type: 'reward',
-      amount: 1250,
-      date: '22/12/2025 09:15',
-      status: 'completed',
-      txId: '0x4e5f6g...hij456',
-    },
-    {
-      id: 3,
-      type: 'purchase',
-      amount: 25000,
-      date: '20/12/2025 16:45',
-      status: 'completed',
-      txId: '0x1a2b3c...klm789',
-    },
-    {
-      id: 4,
-      type: 'unstake',
-      amount: 5000,
-      date: '18/12/2025 11:20',
-      status: 'completed',
-      txId: '0x9d8e7f...nop012',
-    },
-    {
-      id: 5,
-      type: 'stake',
-      amount: 15000,
-      date: '15/12/2025 13:00',
-      status: 'completed',
-      txId: '0x6c5d4e...qrs345',
-    },
-  ];
+  const transactions = [];
 
   const platformMetrics = {
-    treesPlanted: 45230,
-    co2Offset: 12850,
-    platformRevenue: 2450000,
-    activeUsers: 8750,
-    shareholderPercentage: 0.15,
+    treesPlanted: 0,
+    co2Offset: 0,
+    platformRevenue: 0,
+    activeUsers: 0,
+    shareholderPercentage: 0,
   };
 
   const handleStake = (poolId, amount) => {

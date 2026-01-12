@@ -8,61 +8,7 @@ const KYCApprovalsTab = () => {
   const [selectedApplication, setSelectedApplication] = useState(null);
   const [rejectionReason, setRejectionReason] = useState('');
 
-  const kycApplications = [
-  {
-    id: 1,
-    applicantName: "Sarah Johnson",
-    email: "sarah.j@greentech.com",
-    avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_10df5a971-1765003957966.png",
-    avatarAlt: "Professional woman with blonde hair in navy business suit smiling at camera",
-    companyName: "GreenTech Solutions Ltd",
-    submissionDate: "2025-02-10",
-    documents: [
-    { type: "Trade License", url: "#", status: "verified" },
-    { type: "Tax Registration", url: "#", status: "verified" },
-    { type: "Bank Statement", url: "#", status: "pending" },
-    { type: "Director ID", url: "#", status: "verified" }],
-
-    projectTypes: ["Mangrove Restoration", "Solar Energy"],
-    expectedCredits: "5,000 tonnes CO₂/year",
-    status: "pending"
-  },
-  {
-    id: 2,
-    applicantName: "Ahmed Al Rashid",
-    email: "ahmed.r@ecoprojects.ae",
-    avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1723d6ff3-1763294365385.png",
-    avatarAlt: "Middle Eastern businessman with short black hair wearing white kandura and traditional headwear",
-    companyName: "UAE Eco Projects",
-    submissionDate: "2025-02-12",
-    documents: [
-    { type: "Trade License", url: "#", status: "verified" },
-    { type: "Tax Registration", url: "#", status: "verified" },
-    { type: "Bank Statement", url: "#", status: "verified" },
-    { type: "Director ID", url: "#", status: "verified" }],
-
-    projectTypes: ["Afforestation"],
-    expectedCredits: "3,200 tonnes CO₂/year",
-    status: "pending"
-  },
-  {
-    id: 3,
-    applicantName: "Maria Garcia",
-    email: "m.garcia@renewable.com",
-    avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_14c5b6918-1763294965734.png",
-    avatarAlt: "Hispanic woman with long dark hair wearing professional gray blazer with confident smile",
-    companyName: "Renewable Energy Corp",
-    submissionDate: "2025-02-08",
-    documents: [
-    { type: "Trade License", url: "#", status: "rejected" },
-    { type: "Tax Registration", url: "#", status: "verified" },
-    { type: "Bank Statement", url: "#", status: "pending" },
-    { type: "Director ID", url: "#", status: "verified" }],
-
-    projectTypes: ["Solar Energy", "Wind Energy"],
-    expectedCredits: "8,500 tonnes CO₂/year",
-    status: "under_review"
-  }];
+  const kycApplications = [];
 
 
   const getStatusBadge = (status) => {

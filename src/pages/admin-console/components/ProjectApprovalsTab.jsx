@@ -8,58 +8,7 @@ const ProjectApprovalsTab = () => {
   const [filterType, setFilterType] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = [
-  {
-    id: 1,
-    name: "Dubai Mangrove Restoration Initiative",
-    seller: "GreenTech Solutions Ltd",
-    sellerAvatar: "https://img.rocket.new/generatedImages/rocket_gen_img_10df5a971-1765003957966.png",
-    sellerAvatarAlt: "Professional woman with blonde hair in navy business suit smiling at camera",
-    type: "Mangrove Restoration",
-    location: "Dubai, UAE",
-    image: "https://images.unsplash.com/photo-1566131976697-d334c1e3496a",
-    imageAlt: "Lush green mangrove forest with dense vegetation along coastal waterway in Dubai",
-    expectedCredits: "5,000 tonnes CO₂/year",
-    verraId: "VCS-2024-1234",
-    submissionDate: "2025-02-15",
-    status: "pending",
-    documents: ["Project Design", "Baseline Study", "Monitoring Plan"],
-    description: `Comprehensive mangrove restoration project covering 50 hectares of coastal area in Dubai.\nFocuses on native species planting and long-term ecosystem monitoring.\nExpected to sequester significant carbon while providing habitat for marine life.`
-  },
-  {
-    id: 2,
-    name: "Abu Dhabi Solar Farm Project",
-    seller: "UAE Eco Projects",
-    sellerAvatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1723d6ff3-1763294365385.png",
-    sellerAvatarAlt: "Middle Eastern businessman with short black hair wearing white kandura and traditional headwear",
-    type: "Solar Energy",
-    location: "Abu Dhabi, UAE",
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_18363b4a5-1766183617080.png",
-    imageAlt: "Large-scale solar panel installation with rows of photovoltaic panels under bright desert sun in Abu Dhabi",
-    expectedCredits: "8,500 tonnes CO₂/year",
-    verraId: "VCS-2024-5678",
-    submissionDate: "2025-02-14",
-    status: "under_review",
-    documents: ["Project Design", "Technical Specifications", "Environmental Impact"],
-    description: `Large-scale solar energy project generating clean electricity for Abu Dhabi.\n200 MW capacity with advanced photovoltaic technology.\nReduces reliance on fossil fuels and contributes to UAE's renewable energy targets.`
-  },
-  {
-    id: 3,
-    name: "Sharjah Afforestation Program",
-    seller: "Renewable Energy Corp",
-    sellerAvatar: "https://img.rocket.new/generatedImages/rocket_gen_img_14c5b6918-1763294965734.png",
-    sellerAvatarAlt: "Hispanic woman with long dark hair wearing professional gray blazer with confident smile",
-    type: "Afforestation",
-    location: "Sharjah, UAE",
-    image: "https://images.unsplash.com/photo-1592033203675-1de6b285c171",
-    imageAlt: "Young tree saplings planted in organized rows across desert landscape with irrigation system in Sharjah",
-    expectedCredits: "3,200 tonnes CO₂/year",
-    verraId: "VCS-2024-9012",
-    submissionDate: "2025-02-12",
-    status: "approved",
-    documents: ["Project Design", "Species Selection", "Water Management Plan"],
-    description: `Desert afforestation initiative planting drought-resistant native species.\n100 hectares of previously barren land being transformed into green space.\nIncludes advanced irrigation systems and community engagement programs.`
-  }];
+  const projects = [];
 
 
   const typeOptions = [

@@ -32,205 +32,44 @@ const BuyerDashboard = () => {
   {
     icon: 'ShoppingCart',
     title: 'Total Credits Purchased',
-    value: '245',
+    value: '0',
     subtitle: 'tCO₂ equivalent',
-    trend: { direction: 'up', value: '+12%' },
+    trend: null,
     color: 'primary'
   },
   {
     icon: 'Leaf',
     title: 'CO₂ Offset Achieved',
-    value: '245,000',
+    value: '0',
     subtitle: 'kg CO₂ neutralized',
-    trend: { direction: 'up', value: '+8%' },
+    trend: null,
     color: 'success'
   },
   {
     icon: 'Image',
     title: 'Active NFT Holdings',
-    value: '18',
+    value: '0',
     subtitle: 'Blockchain verified',
     color: 'accent'
   },
   {
     icon: 'Lock',
     title: 'Retired Credits',
-    value: '5',
+    value: '0',
     subtitle: 'Permanently offset',
     color: 'secondary'
   }];
 
 
-  const purchasedCredits = [
-  {
-    id: 'CC001',
-    projectName: 'Abu Dhabi Mangrove Restoration',
-    projectImage: "https://images.unsplash.com/photo-1566131976697-d334c1e3496a",
-    projectImageAlt: 'Lush green mangrove forest with dense vegetation along coastal waterway in Abu Dhabi',
-    location: 'Abu Dhabi, UAE',
-    type: 'Mangrove',
-    typeIcon: 'TreePine',
-    tonnage: 50,
-    purchaseDate: '15/11/2025',
-    verification: 'Verra VCS',
-    status: 'active',
-    tokenId: 'NFT-CC001-2025',
-    registryId: 'VCS-3421-2025',
-    blockchain: 'Polygon',
-    mintDate: '15/11/2025',
-    owner: 'buyer@example.com',
-    transferable: false,
-    image: "https://images.unsplash.com/photo-1566131976697-d334c1e3496a",
-    imageAlt: 'Lush green mangrove forest with dense vegetation along coastal waterway in Abu Dhabi',
-    description: 'This carbon credit represents 50 tonnes of CO₂ offset through mangrove restoration in Abu Dhabi coastal zones.',
-    blockchainUrl: 'https://polygonscan.com/tx/0x1234567890abcdef'
-  },
-  {
-    id: 'CC002',
-    projectName: 'Dubai Solar Farm Initiative',
-    projectImage: "https://img.rocket.new/generatedImages/rocket_gen_img_18363b4a5-1766183617080.png",
-    projectImageAlt: 'Modern solar panel array installation with blue photovoltaic cells under bright sunlight in Dubai desert',
-    location: 'Dubai, UAE',
-    type: 'Solar',
-    typeIcon: 'Sun',
-    tonnage: 75,
-    purchaseDate: '08/11/2025',
-    verification: 'Gold Standard',
-    status: 'active',
-    tokenId: 'NFT-CC002-2025',
-    registryId: 'GS-5632-2025',
-    blockchain: 'Polygon',
-    mintDate: '08/11/2025',
-    owner: 'buyer@example.com',
-    transferable: false,
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_18363b4a5-1766183617080.png",
-    imageAlt: 'Modern solar panel array installation with blue photovoltaic cells under bright sunlight in Dubai desert',
-    description: 'This carbon credit represents 75 tonnes of CO₂ offset through solar energy generation in Dubai.',
-    blockchainUrl: 'https://polygonscan.com/tx/0xabcdef1234567890'
-  },
-  {
-    id: 'CC003',
-    projectName: 'Sharjah Coastal Afforestation',
-    projectImage: "https://images.unsplash.com/photo-1507854143879-5749b3e3bd51",
-    projectImageAlt: 'Young green trees planted in organized rows along sandy coastal area in Sharjah with ocean view',
-    location: 'Sharjah, UAE',
-    type: 'Afforestation',
-    typeIcon: 'Trees',
-    tonnage: 40,
-    purchaseDate: '22/10/2025',
-    verification: 'Verra VCS',
-    status: 'active',
-    tokenId: 'NFT-CC003-2025',
-    registryId: 'VCS-7821-2025',
-    blockchain: 'Polygon',
-    mintDate: '22/10/2025',
-    owner: 'buyer@example.com',
-    transferable: false,
-    image: "https://images.unsplash.com/photo-1507854143879-5749b3e3bd51",
-    imageAlt: 'Young green trees planted in organized rows along sandy coastal area in Sharjah with ocean view',
-    description: 'This carbon credit represents 40 tonnes of CO₂ offset through coastal afforestation in Sharjah.',
-    blockchainUrl: 'https://polygonscan.com/tx/0x567890abcdef1234'
-  },
-  {
-    id: 'CC004',
-    projectName: 'Ras Al Khaimah Wind Energy',
-    projectImage: "https://images.unsplash.com/photo-1686936388915-a763e19cd478",
-    projectImageAlt: 'White wind turbines standing tall against clear blue sky in mountainous terrain of Ras Al Khaimah',
-    location: 'Ras Al Khaimah, UAE',
-    type: 'Wind',
-    typeIcon: 'Wind',
-    tonnage: 60,
-    purchaseDate: '05/10/2025',
-    verification: 'Gold Standard',
-    status: 'active',
-    tokenId: 'NFT-CC004-2025',
-    registryId: 'GS-9234-2025',
-    blockchain: 'Polygon',
-    mintDate: '05/10/2025',
-    owner: 'buyer@example.com',
-    transferable: false,
-    image: "https://images.unsplash.com/photo-1686936388915-a763e19cd478",
-    imageAlt: 'White wind turbines standing tall against clear blue sky in mountainous terrain of Ras Al Khaimah',
-    description: 'This carbon credit represents 60 tonnes of CO₂ offset through wind energy generation in Ras Al Khaimah.',
-    blockchainUrl: 'https://polygonscan.com/tx/0xdef1234567890abc'
-  },
-  {
-    id: 'CC005',
-    projectName: 'Fujairah Mangrove Conservation',
-    projectImage: "https://img.rocket.new/generatedImages/rocket_gen_img_1faf92d57-1765333913332.png",
-    projectImageAlt: 'Dense mangrove roots submerged in clear turquoise water along Fujairah coastline with tropical vegetation',
-    location: 'Fujairah, UAE',
-    type: 'Mangrove',
-    typeIcon: 'TreePine',
-    tonnage: 20,
-    purchaseDate: '18/09/2025',
-    verification: 'Verra VCS',
-    status: 'retired',
-    tokenId: 'NFT-CC005-2025',
-    registryId: 'VCS-4567-2025',
-    blockchain: 'Polygon',
-    mintDate: '18/09/2025',
-    owner: 'buyer@example.com',
-    transferable: false,
-    image: "https://img.rocket.new/generatedImages/rocket_gen_img_1faf92d57-1765333913332.png",
-    imageAlt: 'Dense mangrove roots submerged in clear turquoise water along Fujairah coastline with tropical vegetation',
-    description: 'This carbon credit represents 20 tonnes of CO₂ offset through mangrove conservation in Fujairah. This credit has been permanently retired.',
-    blockchainUrl: 'https://polygonscan.com/tx/0x234567890abcdef1'
-  }];
+  const purchasedCredits = [];
 
 
-  const transactionHistory = [
-  {
-    id: 'TXN001',
-    projectName: 'Abu Dhabi Mangrove Restoration',
-    date: '15/11/2025',
-    tonnage: 50,
-    amount: 'AED 18,500',
-    paymentMethod: 'IZRA',
-    discount: '10%'
-  },
-  {
-    id: 'TXN002',
-    projectName: 'Dubai Solar Farm Initiative',
-    date: '08/11/2025',
-    tonnage: 75,
-    amount: 'AED 27,750',
-    paymentMethod: 'AED',
-    discount: null
-  },
-  {
-    id: 'TXN003',
-    projectName: 'Sharjah Coastal Afforestation',
-    date: '22/10/2025',
-    tonnage: 40,
-    amount: 'USDT 4,320',
-    paymentMethod: 'USDT',
-    discount: null
-  },
-  {
-    id: 'TXN004',
-    projectName: 'Ras Al Khaimah Wind Energy',
-    date: '05/10/2025',
-    tonnage: 60,
-    amount: 'AED 22,200',
-    paymentMethod: 'IZRA',
-    discount: '10%'
-  }];
+  const transactionHistory = [];
 
 
   const impactData = {
-    byType: [
-    { name: 'Mangrove', value: 70, percentage: 28.6 },
-    { name: 'Solar', value: 75, percentage: 30.6 },
-    { name: 'Afforestation', value: 40, percentage: 16.3 },
-    { name: 'Wind', value: 60, percentage: 24.5 }],
-
-    byLocation: [
-    { name: 'Abu Dhabi', percentage: 35 },
-    { name: 'Dubai', percentage: 30 },
-    { name: 'Sharjah', percentage: 20 },
-    { name: 'Other Emirates', percentage: 15 }]
-
+    byType: [],
+    byLocation: []
   };
 
   const handleLogout = () => {
